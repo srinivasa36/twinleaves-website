@@ -116,7 +116,7 @@ const App = () => {
   };
 
   return (
-    <div style={{ flexGrow: 1 }}>
+    <div style={{ flexGrow: 1, margin: "20px 0" }}>
       <Box component="div" display="flex" justifyContent="center">
         <Typography variant="h4" color="#4caf50">
           Twinleaves Grocery

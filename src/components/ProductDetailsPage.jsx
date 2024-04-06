@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Modal, IconButton } from "@mui/material";
-import Button from "@mui/material/Button/Button";
+import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
 
 const ProductDetailsPage = ({ product, open, handleClose }) => {
@@ -24,6 +24,9 @@ const ProductDetailsPage = ({ product, open, handleClose }) => {
           alignItems: "stretch",
           padding: "20px",
           overflowY: "auto",
+          width: "80%",
+          maxWidth: "600px",
+          height: "80vh",
         }}
       >
         <IconButton
@@ -35,20 +38,19 @@ const ProductDetailsPage = ({ product, open, handleClose }) => {
         <Box
           style={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
-            marginBottom: "20px",
+            marginBottom: "20px 0",
           }}
         >
-          <Box style={{ marginRight: "20px" }}>
-            {product && (
-              <img
-                src={product.image}
-                alt={product.brand}
-                style={{ width: "100%", height: "auto" }}
-              />
-            )}
-          </Box>
-          <Box>
+          {product && (
+            <img
+              src={product.image}
+              alt={product.brand}
+              style={{ width: "100%", height: "auto" }}
+            />
+          )}
+          <Box marginTop="20px">
             <Typography
               variant="h6"
               component="h2"

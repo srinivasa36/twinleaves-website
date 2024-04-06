@@ -1,5 +1,6 @@
 import React from "react";
-import { TextField } from "@mui/material";
+import { TextField, InputAdornment, IconButton } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
 const SearchFilter = ({ searchTerm, setSearchTerm }) => {
   return (
@@ -9,6 +10,15 @@ const SearchFilter = ({ searchTerm, setSearchTerm }) => {
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       style={{ margin: "10px" }}
+      InputProps={{
+        startAdornment: (
+          <InputAdornment position="start">
+            <IconButton disabled>
+              <SearchIcon />
+            </IconButton>
+          </InputAdornment>
+        ),
+      }}
     />
   );
 };

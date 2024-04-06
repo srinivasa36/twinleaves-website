@@ -7,7 +7,7 @@ const CategoryFilter = ({
   setSelectedCategory,
 }) => {
   return (
-    <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
+    <FormControl variant="outlined" sx={{ m: 1, minWidth: 200 }}>
       <InputLabel id="category-select-label">Category</InputLabel>
       <Select
         labelId="category-select-label"
